@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    html {
+      font-family: arial;
+    }
+
+
+    body {
+      background-color: #99B29E;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    section {
+      max-height: 180;
+      background: #ccc;
+    }
+
+    img {
+      box-sizing: border-box;
+      border: 6px solid #ffffff;
+      min-height: 100%;
+      max-height: 240px;
+      float: left;
+    }
+
+    .name {
+
+      font-size: 30px;
+      text-align: left;
+      padding-left: 30px;
+      padding-top: 30px;
+      margin: 0px;
+      float: left;
+      color: #575555;
+    }
+
+    pagetitle {
+
+      font-size: 40px;
+      text-align: right;
+      padding-right: 30px;
+      padding-top: 30px;
+      float: left;
+      color: #575555;
+    }
+
+    .skillinfo {
+      min-height: 100%;
+      flex: 1;
+      background-color: #ccc;
+      margin: 30px;
+      padding: 20px;
+      color: #575555;
+      border-radius: 9px;
+    }
+
+    .skillinfo a:link {
+      color: #575555;
+    }
+
+    .skillinfo a:visited {
+      color: #575555;
+    }
+
+
+    info {
+      font-size: 18px;
+      color: #575555;
+      padding-left: 30px;
+      line-height: 1;
+
+    }
+
+    h1 {
+      line-height: 1;
+      margin: 0px;
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      line-height: 1.1;
+    }
+
+    .nav {
+      background-color: #575555;
+      list-style-type: none;
+      text-align: center;
+    }
+
+    .nav li {
+      display: inline-block;
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+    }
+
+    .nav a:link {
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      box-sizing: padding-box;
+
+    }
+
+    .selected a {
+      background-color: grey;
+    }
+
+    .nav a:visited {
+      color: white;
+    }
+
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+
+    .nav a:hover {
+      background-color: grey;
+    }
+
+    .fillvertical {
+      height: 100%;
+    }
+
+    .skilllist {
+      list-style-type: "";
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <section>
+    <div class="flex-col">
+      <div class="flex-row">
+        <img src="https://i.imgur.com/gtCciaC.jpg">
+        <div class="flex-col">
+          <h1 class="name">Andrew Benington</h1>
+          <info>
+            <p>UIUC Sophomore</p>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>Seeking an internship for summer 2020</p>
+          </info class="name">
+        </div>
+
+        <pagetitle class="flex vertical">
+          <h1>Skills</h1>
+        </pagetitle>
+
+      </div>
+      <div class="nav">
+
+        <li><a href="about.html">About</a>
+        <li class="selected"><a href="skills.html">Skills</a>
+        <li><a href="classes.html">Classes</a>
+        <li><a href="projects.html">Projects</a>
+        <li><a href="contact.html">Contact</a></li>
+
+
+      </div>
+    </div>
+
+  </section>
+  <div class="flex-row">
+    <div class="skillinfo">
+      <h1>Java</h1>
+      <p>2016-present</p>
+      <h4>Used in:</h4>
+      <div class="skilllist">
+        <li>High school computer science classes
+        <li>CS 126 (Software Design Studio)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skillinfo">
+      <h1>C/C++</h1>
+      <h4>Used in:</h4>
+      <div class="skilllist">
+        <li>CS 126 (Software Design Studio)
+        <li>CS 225 (Discrete Structures)
+        <li>CS 241 (System Programming)
+        <li><a href="rhythmgame.html">Rhythm Game</a></li>
+        </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="skillinfo">
+      <h1>Dart/Flutter</h1>
+      <p>Using C, mastered the use of common system functions and the risks that those functions can introduce.
+        Recreated
+        functions like malloc() and realloc(), and ranked 30th in the efficiency competition in my class of over 200
+        where we were measured on our algorithm's speed and memory usage.
+      </p>
+    </div>
+  </div>
+  <div class="flex-row">
+    <div class="skillinfo">
+      <h1>Python</h1>
+      <p>Used in my Bioinformatics class, including year-end project where I implemented the Zuker algorithm for
+        predicting RNA folding.</p>
+    </div>
+
+    <div class="skillinfo">
+      <h1>JavaScript</h1>
+      <p>For my <a href="sharequote.html">ShareQuote</a> project, I learned JavaScript to write Cloud Firestore
+        functions for
+        managing database data and notifications.</p>
+    </div>
+    <div class="skillinfo">
+      <h1>HTML/CSS</h1>
+      <p>I learned CSS to create this site. I built it from the ground up by following online tutorials. I'm
+        resourceful when I need to work on projects like this that requires a new skill, and was able to finish this in
+        a few days.</p>
+    </div>
+  </div>
+  <div class="flex-row">
+    <div class="skillinfo">
+      <h1><a href="https://cs.illinois.edu/courses/profile/CS438">CS 412 - Data Mining</a></h1>
+      <p>(in progress)</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

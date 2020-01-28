@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    html {
+      font-family: arial;
+    }
+
+    div {
+
+      margin: 0px;
+    }
+
+    body {
+      background-color: #99B29E;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    section {
+      height: 180;
+      background: #ccc;
+    }
+
+    img {
+      box-sizing: border-box;
+      border: 6px solid #ffffff;
+      min-height: 100%;
+      max-height: 240px;
+      float: left;
+    }
+
+    .name {
+
+      font-size: 30px;
+      text-align: left;
+      padding-left: 30px;
+      padding-top: 30px;
+      margin: 0px;
+      float: left;
+      color: #575555;
+    }
+
+    pagetitle {
+
+      font-size: 40px;
+      text-align: right;
+      padding-right: 30px;
+      padding-top: 30px;
+      float: left;
+      color: #575555;
+    }
+
+
+    info {
+      font-size: 18px;
+      color: #575555;
+      padding-left: 30px;
+      line-height: 1;
+
+    }
+
+    h1 {
+      line-height: 1;
+      margin: 0px;
+    }
+
+    h2 {
+      line-height: 1;
+      margin: 0px;
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      line-height: 1.1;
+    }
+
+    windows {
+      box-sizing: padding-box;
+    }
+
+    .home {
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+
+    .contactinfo {
+      flex: 1;
+      background-color: #ccc;
+      margin: 30px;
+      padding: 20px;
+      color: #575555;
+      border-radius: 9px;
+      box-sizing: padding-box;
+    }
+
+    .contactinfo li {
+      display: block;
+      padding-top: 10px;
+    }
+
+    .contactinfo a:link {
+
+
+      color: #383838;
+    }
+
+    .contactinfo a:visited {
+      color: #383838;
+    }
+
+    .nav {
+      background-color: #575555;
+      list-style-type: none;
+      text-align: center;
+    }
+
+    .nav li {
+      display: inline-block;
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+    }
+
+    .nav a:link {
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      box-sizing: padding-box;
+
+    }
+
+    .selected a {
+      background-color: grey;
+    }
+
+    .nav a:visited {
+      color: white;
+    }
+
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      box-sizing: padding-box;
+    }
+
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      box-sizing: padding-box;
+      margin: 0;
+    }
+
+    .nav a:hover {
+      background-color: grey;
+    }
+
+    .fillvertical {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <section>
+    <div class="flex-col">
+      <div class="flex-row">
+        <img src="https://i.imgur.com/gtCciaC.jpg">
+        <div class="flex-col">
+          <h1 class="name">Andrew Benington</h1>
+          <info>
+            <p>UIUC Sophomore</p>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>Seeking an internship for summer 2020</p>
+          </info>
+        </div>
+
+        <pagetitle class="flex vertical">
+          <h1>Contact Me</h1>
+        </pagetitle>
+
+      </div>
+      <div class="nav">
+
+        <li><a href="about.html">About</a>
+        <li><a href="skills.html">Skills</a>
+        <li><a href="classes.html">Classes</a>
+        <li><a href="projects.html">Projects</a>
+        <li class="selected"><a href="contact.html">Contact</a></li class="selected">
+
+
+      </div>
+    </div>
+
+  </section>
+  <windows>
+  <div class="flex-row">
+    <div class="flex-col">
+      <div class="contactinfo">
+        <h2>You can email me at:</h2>
+        <li>andrewbenington57@gmail.com</li>
+        <li>aab4@illinois.edu</li>
+      </div>
+      <div class="contactinfo">
+        <h2>You can text me at:</h2>
+        <li>630-746-0054</li>
+      </div>
+    </div>
+    <div class="contactinfo">
+      <h2>Campus Address until May 2020:</h2>
+      <li>Sherman Hall Room 1052</li>
+      <li>909 S Fifth St</li>
+      <li>Champaign, IL 61820</li>
+      <h2 class="home">Permanent Address:</h2>
+      <li>741 S Grant St</li>
+      <li>Hinsdale, IL 60521</li>
+    </div>
+  </div>
+</windows>
+
+</body>
+
+</html>
