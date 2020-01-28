@@ -7,10 +7,6 @@
       font-family: arial;
     }
 
-    div {
-
-      margin: 0px;
-    }
 
     body {
       background-color: #99B29E;
@@ -19,20 +15,24 @@
     }
 
     section {
-      height: 180;
-      background: #ccc;
+      max-height: 170;
+      background: #fff;
     }
 
     img {
       box-sizing: border-box;
-      border: 6px solid #ffffff;
-      min-height: 100%;
+      border: 6px solid #575555;
       max-height: 240px;
       float: left;
     }
+    imageback {
+      background-color: #575555;
+      max-width: 100%;
+      flex: 1;
+      flex-direction: column;
+    }
 
     .name {
-
       font-size: 30px;
       text-align: left;
       padding-left: 30px;
@@ -88,7 +88,7 @@
 
     .contactinfo {
       flex: 1;
-      background-color: #ccc;
+      background-color: #fff;
       margin: 30px;
       padding: 20px;
       color: #575555;
@@ -145,16 +145,13 @@
     .flex-row {
       display: flex;
       flex-direction: row;
-      flex: 1;
-      box-sizing: padding-box;
+      height: 100%;
     }
 
     .flex-col {
       display: flex;
       flex-direction: column;
-      flex: 1;
-      box-sizing: padding-box;
-      margin: 0;
+      width: 100%;
     }
 
     .nav a:hover {
@@ -172,57 +169,61 @@
 
 
   <section>
-    <div class="flex-col">
-      <div class="flex-row">
+    <div class="flex-row">
+      <imageback>
         <img src="https://i.imgur.com/gtCciaC.jpg">
-        <div class="flex-col">
-          <h1 class="name">Andrew Benington</h1>
-          <info>
-            <p>UIUC Sophomore</p>
-            <p>Bachelor of Science in Computer Science</p>
-            <p>Seeking an internship for summer 2020</p>
-          </info>
+      </imageback>
+      <div class="flex-col">
+        <div class="flex-row">
+
+          <div class="flex-col">
+            <h1 class="name">Andrew Benington</h1>
+            <info>
+              <p>UIUC Sophomore</p>
+              <p>Bachelor of Science in Computer Science</p>
+              <p>Seeking an internship for summer 2020</p>
+            </info class="name">
+          </div>
+
+          <pagetitle class="flex vertical">
+            <h1>Contact Me</h1>
+          </pagetitle>
+
         </div>
+        <div class="nav">
 
-        <pagetitle class="flex vertical">
-          <h1>Contact Me</h1>
-        </pagetitle>
+          <li><a href="index.html">About</a>
+          <li class="selected"><a href="skills.html">Skills</a>
+          <li><a href="classes.html">Classes</a>
+          <li><a href="projects.html">Projects</a>
+          <li><a href="contact.html">Contact</a></li>
 
+
+        </div>
       </div>
-      <div class="nav">
-
-        <li><a href="index.html">About</a>
-        <li><a href="skills.html">Skills</a>
-        <li><a href="classes.html">Classes</a>
-        <li><a href="projects.html">Projects</a>
-        <li class="selected"><a href="contact.html">Contact</a></li class="selected">
-
-
-      </div>
-    </div>
 
   </section>
   <windows>
-  <div class="flex-row">
-    <div class="flex-col">
-      <div class="contactinfo">
-        <h2>You can email me at:</h2>
-        <li>andrewbenington57@gmail.com</li>
-        <li>aab4@illinois.edu</li>
+    <div class="flex-row">
+      <div class="flex-col">
+        <div class="contactinfo">
+          <h2>You can email me at:</h2>
+          <li>andrewbenington57@gmail.com</li>
+          <li>aab4@illinois.edu</li>
+        </div>
+        <div class="contactinfo">
+          <h2>You can text me at:</h2>
+          <li>630-746-0054</li>
+        </div>
       </div>
       <div class="contactinfo">
-        <h2>You can text me at:</h2>
-        <li>630-746-0054</li>
+        <h2>Campus Address until May 2020:</h2>
+        <li>Sherman Hall Room 1052</li>
+        <li>909 S Fifth St</li>
+        <li>Champaign, IL 61820</li>
       </div>
     </div>
-    <div class="contactinfo">
-      <h2>Campus Address until May 2020:</h2>
-      <li>Sherman Hall Room 1052</li>
-      <li>909 S Fifth St</li>
-      <li>Champaign, IL 61820</li>
-    </div>
-  </div>
-</windows>
+  </windows>
 
 </body>
 
