@@ -62,6 +62,8 @@
       color: #575555;
       border-radius: 9px;
       text-decoration: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
 
     .classinfo a:link {
@@ -98,13 +100,13 @@
       background-color: #575555;
       list-style-type: none;
       text-align: center;
+      padding: 0;
+      margin: 0;
     }
 
     .nav li {
       display: inline-block;
       font-size: 20px;
-      margin-top: 20px;
-      margin-bottom: 20px;
 
     }
 
@@ -145,6 +147,37 @@
     .fillvertical {
       height: 100%;
     }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      box-sizing: padding-box;
+
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-sizing: padding-box;
+
+
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      box-sizing: padding-box;
+
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
   </style>
 </head>
 
@@ -179,7 +212,12 @@
           <li><a href="index.html">About</a>
           <li><a href="skills.html">Skills</a>
           <li><a href="classes.html">Classes</a>
-          <li class="selected"><a href="projects.html">Projects</a>
+          <li class="selected"><a class="dropdown" href="projects.html">Projects
+              <div class="dropdown-content">
+                <a>Hello World!</a>
+
+              </div>
+            </a>
           <li><a href="contact.html">Contact</a></li>
 
 
