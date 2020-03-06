@@ -9,22 +9,26 @@
 
 
     body {
-      background-color: #99B29E;
+      background-image: linear-gradient(to bottom, rgb(212, 250, 202), white);
       margin: 0px;
       padding: 0px;
     }
 
     section {
-      max-height: 180;
-      background: #fff;
+      background-image: linear-gradient(to top left, rgb(212, 250, 202), rgb(42, 165, 69));
+      text-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      min-width: 900px;
+      color: #ffffff;
     }
 
     section img {
-      box-sizing: border-box;
-      border: 6px solid #575555;
-      max-height: 240px;
+      max-height: auto;
       float: left;
+      width: auto;
+      max-width: 130px;
+
     }
+
     imageback {
       background-color: #575555;
       max-width: 100%;
@@ -40,7 +44,6 @@
       padding-top: 30px;
       margin: 0px;
       float: left;
-      color: #575555;
     }
 
     pagetitle {
@@ -50,7 +53,7 @@
       padding-right: 30px;
       padding-top: 30px;
       float: left;
-      color: #575555;
+      color: #ffffff;
     }
 
     .desinfo {
@@ -97,7 +100,7 @@
 
     info {
       font-size: 18px;
-      color: #575555;
+      color: #ffffff;
       padding-left: 30px;
       line-height: 1;
 
@@ -118,6 +121,7 @@
       background-color: #575555;
       list-style-type: none;
       text-align: center;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
 
     .nav li {
@@ -187,12 +191,9 @@
 <body>
   <section>
     <div class="flex-row">
-      <imageback>
-        <img src="headshot.jpg">
-      </imageback>
       <div class="flex-col">
         <div class="flex-row">
-
+          <img src="headshot.jpg">
           <div class="flex-col">
             <h1 class="name">Andrew Benington</h1>
             <info>
