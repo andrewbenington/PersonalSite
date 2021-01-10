@@ -215,7 +215,7 @@
             <p href="skills.html">Skills</p>
           <li id="classesButton">
             <p>Classes</p>
-          <li>
+          <li id="projectsButton">
             <p href="projects.html">Projects</p>
           <li>
             <p href="contact.html">Contact</p>
@@ -234,6 +234,16 @@
       }); // Click on the checkbox
     }
     document.getElementById("classesButton").addEventListener("click", loadClasses);
+  </script>
+  <script>
+    // On mouse-over, execute myFunction
+    function loadProjects() {
+
+      $(document).ready(function () {
+        $("#body").load("projects.html");
+      }); // Click on the checkbox
+    }
+    document.getElementById("projectsButton").addEventListener("click", loadClasses);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type='text/javascript'>
