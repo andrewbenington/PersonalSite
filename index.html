@@ -204,7 +204,7 @@
 
           <li class="selected"><a href="index.html">About</a>
           <li><a href="skills.html">Skills</a>
-          <li><a href="classes.html">Classes</a>
+          <li><a onclick="loadClasses">Classes</a>
           <li><a href="projects.html">Projects</a>
           <li><a href="contact.html">Contact</a></li>
 
@@ -218,6 +218,16 @@
       $("#body").load("landing.html");
     });
   </script>
+  <script>
+    // On mouse-over, execute myFunction
+    function loadClasses() {
+
+      $(document).ready(function () {
+        $("#body").load("classes.html");
+      }); // Click on the checkbox
+    }
+  </script>
+
 
   <div id="body" class="flex-col"></div>
 
