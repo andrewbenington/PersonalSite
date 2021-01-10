@@ -17,7 +17,7 @@
       font-family: arial;
       height: auto;
       min-height: 100%;
-      visibility:hidden; 
+      visibility: hidden;
     }
 
 
@@ -42,8 +42,8 @@
       max-height: 180px;
     }
 
-    
-   
+
+
 
     info {
       font-size: 18px;
@@ -128,21 +128,23 @@
       color: #575555;
       text-decoration: none;
     }
-  </style><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type='text/javascript'>
-   $(document).ready(function(){
-    $( "#siteTop" ).load( "header.html" );
-    document.getElementsByTagName("html")[0].style.visibility = "visible";
-   });
-   
+    $(document).ready(function () {
+      $("#siteTop").load("header.html").then(function () { document.getElementsByTagName("html")[0].style.visibility = "visible"; });
+
+    });
+
   </script>
 </head>
+
 <body>
 
   <div id="siteTop"></div>
 
 
-  
+
   <div class="flex-row">
 
     <div class="flex-column">
