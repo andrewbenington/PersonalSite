@@ -115,7 +115,7 @@
 
     }
 
-    .selected p {
+    .nav li {
       background-color: grey;
     }
 
@@ -198,7 +198,9 @@
             <info>
               <p>Junior, University of Illinois at Urbana-Champaign</p>
               <p>Bachelor of Science in Computer Science</p>
-              <p><a href="https://www.linkedin.com/in/andrew-benington/">LinkedIn</a> • <a href="http://www.github.com/andrewbenington">Github</a> • <a href="https://app.joinhandshake.com/users/13298925">Handshake</a></p>
+              <p><a href="https://www.linkedin.com/in/andrew-benington/">LinkedIn</a> • <a
+                  href="http://www.github.com/andrewbenington">Github</a> • <a
+                  href="https://app.joinhandshake.com/users/13298925">Handshake</a></p>
             </info class="name">
           </div>
 
@@ -209,22 +211,32 @@
         </div>
         <div class="nav">
 
-          <li class="selected">
-            <p href="index.html">About</p>
-          <li>
-            <p href="skills.html">Skills</p>
+          <li id="aboutButton">
+            <p>About</p>
+          <li id="skillsButton">
+            <p>Skills</p>
           <li id="classesButton">
             <p>Classes</p>
           <li id="projectsButton">
             <p>Projects</p>
-          <li>
-            <p href="contact.html">Contact</p>
+          <li id="contactButton">
+            <p>Contact</p>
           </li>
 
 
         </div>
       </div>
   </section>
+  <script>
+    // On mouse-over, execute myFunction
+    function loadAbout() {
+
+      $(document).ready(function () {
+        $("#body").load("landing.html");
+      }); // Click on the checkbox
+    }
+    document.getElementById("aboutButton").addEventListener("click", loadAbout);
+  </script>
   <script>
     // On mouse-over, execute myFunction
     function loadClasses() {
@@ -251,7 +263,26 @@
       $("#body").load("landing.html");
     });
   </script>
+  <script>
+    // On mouse-over, execute myFunction
+    function loadSkills() {
 
+      $(document).ready(function () {
+        $("#body").load("skills.html");
+      }); // Click on the checkbox
+    }
+    document.getElementById("skillsButton").addEventListener("click", loadSkills);
+  </script>
+  <script>
+    // On mouse-over, execute myFunction
+    function loadContact() {
+
+      $(document).ready(function () {
+        $("#body").load("contact.html");
+      }); // Click on the checkbox
+    }
+    document.getElementById("contactButton").addEventListener("click", loadContact);
+  </script>
 
 
   <div id="body" class="flex-col"></div>
