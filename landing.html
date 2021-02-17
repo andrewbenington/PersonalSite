@@ -50,21 +50,24 @@
     }
 
     .flex-col {
-      display: flex;
+      /*display: flex;*/
       flex-direction: column;
       max-width: 100%;
     }
 
     .aboutinfo {
-      flex: 1;
       background-color: #fff;
-      margin: 30px;
-      padding: 20px;
+      margin: 15px;
+      padding: 15px;
       color: #575555;
       border-radius: 3px;
       text-decoration: none;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       max-width: 100%;
+    }
+    
+    .aboutinfo h3{
+      margin-block-start: 0;
     }
 
     .aboutlinks {
@@ -93,14 +96,59 @@
       color: #575555;
       text-decoration: none;
     }
+
+    .minw {
+      min-width: 400px;
+    }
+
+    #image-slider {
+      width: 100%;
+      max-width: 300px;
+      /* The actual width of our images */
+      overflow: hidden;
+      margin: 0 auto;
+      /* Just to centre the page */
+    }
+
+    ul {
+      width: 1000%;
+      /* No. of images * 100% */
+      overflow: hidden;
+      position: relative;
+      list-style: none;
+      padding-inline-start: 0px;
+    }
+
+    ul li {
+      float: left;
+      width: 10%;
+    }
+
+    ul li img {
+      max-width: 100%;
+    }
+
+
+    body {
+      background-image: linear-gradient(to bottom, rgb(191, 220, 255), white);
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    section {
+      background-image: linear-gradient(to top left, rgb(191, 220, 255), #203666);
+      text-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      width: 100%;
+      color: #ffffff;
+    }
   </style>
 </head>
 
 <body>
 
   <div class="flex-row">
-
-    <div class="flex-column">
+    <div class="flex-col">
       <div class="aboutinfo">
         <p>Hi! I'm a Computer Science student attending University of Illinois, and I'm looking for
           internship
@@ -110,30 +158,49 @@
           setting, and I am always eager to pick up new skills and use the resources available to me to do so. </p>
         <p>I'm excited to have the opportunity to be a Software Engineering Intern at Target this summer.</p>
       </div>
-      <div class="flex-row">
-        <div class="aboutinfo">
-          <p>Sharequote</p>
-          <p>(app screenshots)</p>
-        </div>
-        <div class="aboutinfo">
-          <p>VLC project</p>
-          <p>(demo video)</p>
+      <div class="aboutinfo">
+        <h3>VLC project</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-9nVUHm7zHg" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+
+      </div>
+    </div>
+    <div class="minw">
+      <div class="aboutinfo">
+        <h3>Sharequote</h3>
+        <div id="image-slider">
+          <ul>
+            <li id="one">
+              <img src="sharequotepics/screen1.png">
+              <a href="#five">Back</a>
+              <a href="#two">Next</a>
+            </li>
+            <li id="two">
+              <img src="sharequotepics/screen2.png">
+              <a href="#one">Back</a>
+              <a href="#three">Next</a>
+            </li>
+            <li id="three">
+              <img src="sharequotepics/screen3.png">
+              <a href="#two">Back</a>
+              <a href="#four">Next</a>
+            </li>
+            <li id="four">
+              <img src="sharequotepics/screen4.png">
+              <a href="#three">Back</a>
+              <a href="#five">Next</a>
+            </li>
+            <li id="five">
+              <img src="sharequotepics/screen5.png">
+              <a href="#four">Back</a>
+              <a href="#one">Next</a>
+            </li>
+          </ul>
         </div>
       </div>
-
-
     </div>
-    <div class="aboutlinks">
-
-      <h1>Links</h1>
-      <li><a href="http://www.github.com/andrewbenington">Github</a>
-      <li><a href="https://www.linkedin.com/in/andrew-benington/">LinkedIn</a>
-      <li><a href="https://app.joinhandshake.com/users/13298925">Handshake</a></li>
-    </div>
-
   </div>
-
-
 </body>
 
 </html>
