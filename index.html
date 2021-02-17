@@ -23,6 +23,8 @@
       background-image: linear-gradient(to bottom, rgb(191, 220, 255), white);
       margin: 0px;
       padding: 0px;
+      flex:1;
+      flex-direction: column;
 
     }
 
@@ -55,6 +57,9 @@
       font-size: 25px;
       color: #818181;
       display: block;
+    }
+    .sidebar a:hover {
+      color: #3c4677;
     }
 
 
@@ -171,10 +176,6 @@
       height: 100%;
     }
 
-    /* When you mouse over the navigation links, change their color */
-    .sidebar a:hover {
-      color: #f1f1f1;
-    }
   </style>
 </head>
 
@@ -232,6 +233,7 @@
 
       $(document).ready(function () {
         $("#body").load("landing.html");
+        $("pagetitle").text("Home")
       }); // Click on the checkbox
     }
     document.getElementById("aboutButton").addEventListener("click", loadAbout);
@@ -242,6 +244,7 @@
 
       $(document).ready(function () {
         $("#body").load("classes.html");
+        $("pagetitle").text("Coursework")
       }); // Click on the checkbox
     }
     document.getElementById("classesButton").addEventListener("click", loadClasses);
@@ -261,6 +264,7 @@
   <script type='text/javascript'>
     $(document).ready(function () {
       $("#body").load("landing.html");
+        $("pagetitle").text("Projects")
     });
   </script>
   <script>
@@ -269,6 +273,7 @@
 
       $(document).ready(function () {
         $("#body").load("skills.html");
+        $("pagetitle").text("Skills")
       }); // Click on the checkbox
     }
     document.getElementById("skillsButton").addEventListener("click", loadSkills);
@@ -279,6 +284,7 @@
 
       $(document).ready(function () {
         $("#body").load("contact.html");
+        $("pagetitle").text("Contact Me")
       }); // Click on the checkbox
     }
     document.getElementById("contactButton").addEventListener("click", loadContact);
