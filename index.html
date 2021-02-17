@@ -17,8 +17,8 @@
       height: auto;
       min-height: 100%;
     }
-    
-    h3{
+
+    h3 {
       margin-block-start: 0;
     }
 
@@ -29,7 +29,7 @@
       color: #ffffff;
       margin: 0px;
       padding: 0px;
-      flex:1;
+      flex: 1;
       flex-direction: column;
     }
 
@@ -40,14 +40,14 @@
       z-index: 1;
       background-color: #03153b;
       overflow-x: hidden;
-    }  
-    
-    .sidebar img{
+    }
+
+    .sidebar img {
       height: 214px;
       float: left;
       width: auto;
       padding-bottom: 16px;
-      
+
     }
 
     .sidebar a {
@@ -74,7 +74,7 @@
     }
 
     pagetitle {
-      width: 100%;
+      width: 50%;
       font-size: 40px;
       text-align: right;
       padding-right: 30px;
@@ -105,6 +105,7 @@
     }
 
     .banner {
+      position: relative;
       width: 100%;
       min-height: 214px;
     }
@@ -147,7 +148,9 @@
       background-color: #575555;
       list-style-type: none;
       text-align: center;
-      bottom: 0;
+      position:absolute;
+      bottom:0;
+      width: 100%;
     }
 
     .nav li {
@@ -182,7 +185,7 @@
     .flex-col {
       display: flex;
       flex-direction: column;
-      width:100%;
+      width: 100%;
     }
 
     .nav li:hover {
@@ -190,7 +193,6 @@
     }
 
     .fillvertical {
-      height: 100%;
       width: 100%;
     }
   </style>
@@ -222,7 +224,7 @@
             </div>
           </div>
 
-          <pagetitle class="flex vertical">
+          <pagetitle>
             <h1>Home</h1>
           </pagetitle>
         </div>
