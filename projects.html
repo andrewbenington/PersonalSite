@@ -121,7 +121,7 @@
       <h1>Rhythm Game (2018)</h1>
       <p>A program built my freshman year. It builds a custom rhythm game from an imported MIDI music file.</p>
     </a>
-    <a href="sharequote.html" class="classinfo">
+    <a href="sharequote.html" class="classinfo" id="sqpanel">
       <h1>ShareQuote (2019-)</h1>
       <p>Personal project; a social media app for keeping track of and tagging friends in funny things they've said.
       </p>
@@ -132,5 +132,16 @@
 
 
 </body>
+<script>
+  // On mouse-over, execute myFunction
+  function loadSQ() {
+
+    $(document).ready(function () {
+      $("#body").load("sharequote.html");
+      $("pagetitle").text("ShareQuote")
+    }); // Click on the checkbox
+  }
+  document.getElementById("sqpanel").addEventListener("click", loadSQ);
+</script>
 
 </html>
