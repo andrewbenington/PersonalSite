@@ -65,12 +65,17 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       flex: 1
     }
-    .infobox img{
+
+    .infobox img {
       max-height: 400px;
     }
 
     .minw {
       min-width: 400px;
+    }
+
+    .widthstretch {
+      width: 100%;
     }
 
     #image-slider {
@@ -103,59 +108,61 @@
 </head>
 
 <body>
+  <div class="widthstretch">
+    <div class="flex-row">
+      <div class="flex-col">
+        <div class="infobox">
+          <p>Hi! I'm a Computer Science student attending University of Illinois, and I'm looking for
+            internship
+            opportunities in software development. I have extensive experience in Java, C and C++, Python, and
+            Javascript.
+            I
+            work well with others and contribute ideas in a group
+            setting, and I am always eager to pick up new skills and use the resources available to me to do so. </p>
+          <p>I'm excited to have the opportunity to be a Software Engineering Intern at Target this summer.</p>
+        </div>
+        <div class="infobox">
+          <h3>VLC project</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-9nVUHm7zHg" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 
-  <div class="flex-row">
-    <div class="flex-col">
-      <div class="infobox">
-        <p>Hi! I'm a Computer Science student attending University of Illinois, and I'm looking for
-          internship
-          opportunities in software development. I have extensive experience in Java, C and C++, Python, and Javascript.
-          I
-          work well with others and contribute ideas in a group
-          setting, and I am always eager to pick up new skills and use the resources available to me to do so. </p>
-        <p>I'm excited to have the opportunity to be a Software Engineering Intern at Target this summer.</p>
+        </div>
       </div>
-      <div class="infobox">
-        <h3>VLC project</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-9nVUHm7zHg" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-
-      </div>
-    </div>
-    <div class="minw">
-      <div class="infobox">
-        <h3>Sharequote</h3>
-        <div id="image-slider">
-          <ul>
-            <li id="one">
-              <div class="flex-col">
-                <img src="sharequotepics/screen1.png">
-                <a href="#five">Back</a>
-                <a href="#two">Next</a>
-              </div>
-            </li>
-            <li id="two">
-              <img src="sharequotepics/screen2.png">
-              <a href="#one">Back</a>
-              <a href="#three">Next</a>
-            </li>
-            <li id="three">
-              <img src="sharequotepics/screen3.png">
-              <a href="#two">Back</a>
-              <a href="#four">Next</a>
-            </li>
-            <li id="four">
-              <img src="sharequotepics/screen4.png">
-              <a href="#three">Back</a>
-              <a href="#five">Next</a>
-            </li>
-            <li id="five">
-              <img src="sharequotepics/screen5.png">
-              <a href="#four">Back</a>
-              <a href="#one">Next</a>
-            </li>
-          </ul>
+      <div class="minw">
+        <div class="infobox">
+          <h3>Sharequote</h3>
+          <div id="image-slider">
+            <ul>
+              <li id="one">
+                <div class="flex-col">
+                  <img src="sharequotepics/screen1.png">
+                  <a href="#five">Back</a>
+                  <a href="#two">Next</a>
+                </div>
+              </li>
+              <li id="two">
+                <img src="sharequotepics/screen2.png">
+                <a href="#one">Back</a>
+                <a href="#three">Next</a>
+              </li>
+              <li id="three">
+                <img src="sharequotepics/screen3.png">
+                <a href="#two">Back</a>
+                <a href="#four">Next</a>
+              </li>
+              <li id="four">
+                <img src="sharequotepics/screen4.png">
+                <a href="#three">Back</a>
+                <a href="#five">Next</a>
+              </li>
+              <li id="five">
+                <img src="sharequotepics/screen5.png">
+                <a href="#four">Back</a>
+                <a href="#one">Next</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
