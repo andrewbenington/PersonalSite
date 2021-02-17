@@ -17,13 +17,16 @@
       height: auto;
       min-height: 100%;
     }
-
+    
+    h3{
+      margin-block-start: 0;
+    }
 
     body {
       background-image: linear-gradient(to bottom, rgb(191, 220, 255), white);
       margin: 0px;
       padding: 0px;
-      flex:1;
+      flex: 1;
       flex-direction: column;
 
     }
@@ -58,6 +61,7 @@
       color: #818181;
       display: block;
     }
+
     .sidebar a:hover {
       color: #3c4677;
     }
@@ -175,7 +179,6 @@
     .fillvertical {
       height: 100%;
     }
-
   </style>
 </head>
 
@@ -264,7 +267,7 @@
   <script type='text/javascript'>
     $(document).ready(function () {
       $("#body").load("landing.html");
-        $("pagetitle").text("Projects")
+      $("pagetitle").text("Projects")
     });
   </script>
   <script>
@@ -284,7 +287,8 @@
 
       $(document).ready(function () {
         $("#body").load("contact.html");
-        $("pagetitle").text("Contact Me")
+        $("pagetitle").text("Contact Me");
+        $("title").text("Contact - Andrew Benington");
       }); // Click on the checkbox
     }
     document.getElementById("contactButton").addEventListener("click", loadContact);
