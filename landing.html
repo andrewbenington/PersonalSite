@@ -43,6 +43,20 @@
     }
 
 
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+      max-height: 100%;
+    }
+
+    .flex-col {
+      /*display: flex;*/
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .flex-col a {}
+
     .infobox {
       background-color: #fff;
       margin: 15px;
@@ -88,10 +102,6 @@
       float: left;
       width: 10%;
     }
-
-    ul li img {
-      max-width: 100%;
-    }
   </style>
 </head>
 
@@ -117,40 +127,41 @@
 
         </div>
       </div>
-      <div class="minw">
-        <div class="infobox">
-          <h3>Sharequote</h3>
-          <div id="image-slider">
-            <ul>
-              <li id="one">
-                <div class="flex-col">
-                  <img src="sharequotepics/screen1.png">
+      <div class="infobox">
+        <h3>Sharequote</h3>
+        <div id="image-slider">
+          <ul>
+            <li id="one">
+              <div class="flex-col">
+                <img src="sharequotepics/screen1.png">
+                <div class="flex-row">
                   <a href="#five">Back</a>
                   <a href="#two">Next</a>
                 </div>
-              </li>
-              <li id="two">
-                <img src="sharequotepics/screen2.png">
-                <a href="#one">Back</a>
-                <a href="#three">Next</a>
-              </li>
-              <li id="three">
-                <img src="sharequotepics/screen3.png">
-                <a href="#two">Back</a>
-                <a href="#four">Next</a>
-              </li>
-              <li id="four">
-                <img src="sharequotepics/screen4.png">
-                <a href="#three">Back</a>
-                <a href="#five">Next</a>
-              </li>
-              <li id="five">
-                <img src="sharequotepics/screen5.png">
-                <a href="#four">Back</a>
-                <a href="#one">Next</a>
-              </li>
-            </ul>
-          </div>
+
+              </div>
+            </li>
+            <li id="two">
+              <img src="sharequotepics/screen2.png">
+              <a href="#one">Back</a>
+              <a href="#three">Next</a>
+            </li>
+            <li id="three">
+              <img src="sharequotepics/screen3.png">
+              <a href="#two">Back</a>
+              <a href="#four">Next</a>
+            </li>
+            <li id="four">
+              <img src="sharequotepics/screen4.png">
+              <a href="#three">Back</a>
+              <a href="#five">Next</a>
+            </li>
+            <li id="five">
+              <img src="sharequotepics/screen5.png">
+              <a href="#four">Back</a>
+              <a href="#one">Next</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
