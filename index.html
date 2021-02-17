@@ -23,7 +23,10 @@
     }
 
     body {
-      background-image: linear-gradient(to bottom, rgb(191, 220, 255), white);
+      background-image: linear-gradient(to top left, rgb(191, 220, 255), #203666);
+      text-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      width: 100%;
+      color: #ffffff;
       margin: 0px;
       padding: 0px;
       flex: 1;
@@ -31,12 +34,6 @@
       height:auto;
     }
 
-    section {
-      background-image: linear-gradient(to top left, rgb(191, 220, 255), #203666);
-      text-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      width: 100%;
-      color: #ffffff;
-    }
 
     .sidebar {
       height: 100%;
@@ -190,6 +187,7 @@
     .flex-col {
       display: flex;
       flex-direction: column;
+      width:100%;
     }
 
     .nav li:hover {
@@ -206,7 +204,7 @@
 <body>
 
   <div class="flex-row">
-    <div class="sidebar">
+    <div class="sidebar" style="display: in-line">
       <img src="headshot.jpg">
       <a href="https://www.linkedin.com/in/andrew-benington/">LinkedIn</a>
       <a href="http://www.github.com/andrewbenington">Github</a>
@@ -214,7 +212,7 @@
       <a href="2020Resume.pdf">R&eacute;sum&eacute;</a>
     </div>
 
-    <section>
+    <div style="display: in-line" class="flex-col">
 
       <div class="banner">
 
@@ -249,7 +247,7 @@
         </div>
       </div>
       <div id="body" class="flex-col"></div>
-    </section>
+    </div>
 
   </div>
   <script>
