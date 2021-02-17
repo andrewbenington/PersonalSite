@@ -27,24 +27,41 @@
     }
 
     section {
-      background-image: linear-gradient(to top left, rgb(191, 220, 255), rgb(49, 123, 214));
+      background-image: linear-gradient(to top left, rgb(191, 220, 255), #203666);
       text-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      min-width: 900px;
+      width: 100%;
       color: #ffffff;
     }
 
     img {
-      max-height: 180;
-      max-width: 120;
+      height: 214px;
       float: left;
       width: auto;
+      padding-bottom: 16px;
     }
 
-    .name {
+    .sidebar {
+      height: 100%;
+      width: 180px;
+      position: sticky;
+      z-index: 1;
+      background-color: #03153b;
+      overflow-x: hidden;
+    }
 
+    .sidebar a {
+      padding: 6px 16px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+
+    .name {
+      padding-left: 30px;
       font-size: 30px;
       text-align: left;
-      padding-left: 30px;
       padding-top: 30px;
       margin: 0px;
       float: left;
@@ -52,20 +69,28 @@
     }
 
     pagetitle {
-
-      font-size: 20px;
+      width: 50%;
+      font-size: 30px;
       text-align: right;
       padding-right: 30px;
       padding-top: 30px;
-      float: right;
+      float: left;
+      max-height: 214px;
     }
 
-    info {
+    .banner {
+      width: 100%;
+      height: 214px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info {
       font-size: 18px;
       padding-left: 30px;
       line-height: 1;
       text-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
+      width: 100%
     }
 
     h1 {
@@ -91,7 +116,6 @@
       line-height: 1.1;
       color: white;
       font-size: small;
-
       text-decoration: none;
     }
 
@@ -99,12 +123,13 @@
       background-color: #575555;
       list-style-type: none;
       text-align: center;
+      bottom: 0;
     }
 
     .nav li {
       display: inline-block;
       font-size: 20px;
-      padding: 20px;
+      padding: 10px 20px;
       cursor: pointer;
     }
 
@@ -187,40 +212,41 @@
       height: 100%;
     }
 
-    .sidebar {
-      height: 100%;
-      width: 160px;
-      position: fixed;
-      z-index: 1;
-      background-color: #111;
-      overflow-x: hidden;
-      padding-top: 20px;
+    /* When you mouse over the navigation links, change their color */
+    .sidebar a:hover {
+      color: #f1f1f1;
     }
   </style>
 </head>
 
 <body>
-  <section>
 
-    <div>
-      <div class="flex-col">
+  <div class="flex-row">
+    <div class="sidebar">
+      <img src="headshot.jpg">
+      <a href="https://www.linkedin.com/in/andrew-benington/">LinkedIn</a>
+      <a href="http://www.github.com/andrewbenington">Github</a>
+      <a href="https://app.joinhandshake.com/users/13298925">Handshake</a>
+    </div>
+
+    <section>
+
+      <div class="banner">
+
         <div class="flex-row">
-          <img src="headshot.jpg">
-          <div class="flex-col">
+          <div class="fillvertical">
             <h1 class="name">Andrew Benington</h1>
-            <info>
+            <br></br>
+            <br></br>
+            <div class="info">
               <p>Junior, University of Illinois at Urbana-Champaign</p>
               <p>Bachelor of Science in Computer Science</p>
-              <p><a href="https://www.linkedin.com/in/andrew-benington/">LinkedIn</a> • <a
-                  href="http://www.github.com/andrewbenington">Github</a> • <a
-                  href="https://app.joinhandshake.com/users/13298925">Handshake</a></p>
-            </info class="name">
+            </div>
           </div>
 
           <pagetitle class="flex vertical">
-            <h1 >Skills</h1>
+            <h1>Skills</h1>
           </pagetitle>
-
         </div>
         <div class="nav">
 
@@ -235,12 +261,11 @@
           <li id="contactButton">
             <p>Contact</p>
           </li>
-
-
         </div>
       </div>
-  </section>
-
+    </section>
+    <div id="body" class="flex-col"></div>
+  </div>
   <script>
     // On mouse-over, execute myFunction
     function loadAbout() {
@@ -298,15 +323,6 @@
     }
     document.getElementById("contactButton").addEventListener("click", loadContact);
   </script>
-    <div class="sidebar">
-      <a href=" #">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
-    </div>
-
-
-    <div id="body" class="flex-col"></div>
 
 
 </body>
