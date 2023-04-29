@@ -1,5 +1,5 @@
 function EmptyComponent() {
-    return <div />
+    return <div />;
 }
 
 export default EmptyComponent;

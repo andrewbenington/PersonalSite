@@ -12,10 +12,12 @@ const tiles = [
     </ContentBox>,
     <ContentBox>
         <h2>Location:</h2>
-        <p><b>Champaign, IL</b></p>
+        <p>
+            <b>Champaign, IL</b>
+        </p>
         <p> until June 2022</p>
-    </ContentBox>
-]
+    </ContentBox>,
+];
 function Contact() {
     return (
         <PageContent>

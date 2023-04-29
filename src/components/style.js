@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Banner = styled.div`
     display: flex;
@@ -9,13 +9,13 @@ export const Banner = styled.div`
     max-height: 214px;
     font-weight: bold;
     text-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-`
+`;
 
 export const Headshot = styled.img`
     height: 214px;
     float: left;
     width: auto;
-`
+`;
 
 export const Name = styled.div`
     line-height: 1;
@@ -27,7 +27,7 @@ export const Name = styled.div`
     margin: 0px;
     float: left;
     color: #ffffff;
-`
+`;
 
 export const PageTitle = styled.div`
     line-height: 1;
@@ -42,13 +42,13 @@ export const PageTitle = styled.div`
     line-height: 1;
     margin: 0px;
     font-size: 60px;
-`
+`;
 
 export const Info = styled.div`
     font-size: 18px;
     margin-left: 30px;
     line-height: 1;
-`
+`;
 
 export const NavListItem = styled.li`
     background-color: #575555;
@@ -57,8 +57,8 @@ export const NavListItem = styled.li`
     cursor: pointer;
     &:hover {
         background-color: grey;
-      }
-`
+    }
+`;
 
 export const NavLink = styled(Link)`
     line-height: 1.1;
@@ -71,10 +71,10 @@ export const NavLink = styled(Link)`
     }
     &:hover {
         background-color: grey;
-      }
-      &:visited {
+    }
+    &:visited {
         color: white;
-      }
+    }
 `;
 
 export const NavBar = styled.div`
@@ -84,4 +84,4 @@ export const NavBar = styled.div`
     text-align: center;
     width: 100%;
     justify-content: center;
-`
+`;
