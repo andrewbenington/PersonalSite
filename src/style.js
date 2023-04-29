@@ -53,3 +53,19 @@ export const VideoWrapper = styled.div`
         margin: 0px 15px 15px 0px;
     }
 `
+
+export const MobilePageTitle = styled.div`
+    line-height: 1;
+    font-weight: bold;
+    margin: 0px;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 30px;
+    float: left;
+    max-height: 214px;
+    line-height: 1;
+    margin: 0px;
+    font-size: 48px;
+    color: #ffffff;
+`

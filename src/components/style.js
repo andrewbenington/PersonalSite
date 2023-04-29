@@ -32,7 +32,7 @@ export const Name = styled.div`
 export const PageTitle = styled.div`
     line-height: 1;
     margin: 0px;
-    width: fit-content;
+    width: 30%;
     font-size: 40px;
     text-align: right;
     padding-right: 30px;
@@ -46,9 +46,8 @@ export const PageTitle = styled.div`
 
 export const Info = styled.div`
     font-size: 18px;
-    padding-left: 30px;
+    margin-left: 30px;
     line-height: 1;
-    width: 100%
 `
 
 export const NavListItem = styled.li`

@@ -1,8 +1,10 @@
 {
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/15c3851a-4e15-49c1-b299-d8726307f05b/resourceGroups/personal-site/providers/Microsoft.Web/sites/andrewbenington",
-    "appService.deploySubpath": "."
+  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
+  "appService.defaultWebAppToDeploy": "/subscriptions/15c3851a-4e15-49c1-b299-d8726307f05b/resourceGroups/personal-site/providers/Microsoft.Web/sites/andrewbenington",
+  "appService.deploySubpath": ".",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.tabSize": 2
 }

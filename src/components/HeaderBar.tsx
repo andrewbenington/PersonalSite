@@ -1,15 +1,10 @@
 import headshot from '../files/headshot.jpg';
-import React, { useState } from 'react';
 import { Banner, Headshot, Info, Name, PageTitle } from './style';
 import { FlexColStretch, FlexColWide, FlexRow, FlexRowRepel } from '../style';
 import Navigation from './Navigation';
-import { useLocation } from 'react-router-dom'
 
 
-function HeaderBar() {
-    let pages = useLocation().pathname.split('/');
-    let pageName = pages[pages.length - 1].charAt(0).toUpperCase() + pages[pages.length - 1].slice(1);
-    const [title, setTitle] = useState(pageName === "" ? "About" : pageName);
+function HeaderBar(props: { title: string, setTitle: Function }) {
 
     return (
         <FlexRow>
@@ -21,14 +16,14 @@ function HeaderBar() {
                             <Name>Andrew Benington</Name>
                             <br></br>
                             <Info>
-                                <p>Technology Leadership Program at Target</p>
-                                <p>Alumnus, University of Illinois at Urbana-Champaign</p>
+                                <p>Senior, University of Illinois at Urbana-Champaign</p>
+                                <p>Bachelor of Science in Computer Science</p>
                             </Info>
                         </FlexColStretch>
 
-                        <PageTitle>{title}</PageTitle>
+                        <PageTitle>{props.title}</PageTitle>
                     </FlexRowRepel>
-                    <Navigation handler={setTitle} />
+                    <Navigation handler={props.setTitle} />
                 </Banner>
             </FlexColWide>
         </FlexRow>

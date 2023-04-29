@@ -1,4 +1,3 @@
-import React from "react";
 import ContentBox, { ContentShell } from "../../../components/ContentBox";
 import { FlexCol, FlexRow, VideoWrapper } from "../../../style";
 import { PageContent } from "../../About/style";
