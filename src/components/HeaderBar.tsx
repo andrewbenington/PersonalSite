@@ -1,12 +1,10 @@
-import headshot from "../files/headshot.jpg";
 import { FlexColStretch, FlexColWide, FlexRow, FlexRowRepel } from "../style";
 import Navigation from "./Navigation";
-import { Banner, Headshot, Info, Name, PageTitle } from "./style";
+import { Banner, Info, Name, PageTitle } from "./style";
 
 function HeaderBar(props: { title: string; setTitle: Function }) {
     return (
         <FlexRow>
-            <Headshot src={headshot} alt={"Andrew Benington Headshot"} />
             <FlexColWide>
                 <Banner>
                     <FlexRowRepel>
@@ -14,11 +12,11 @@ function HeaderBar(props: { title: string; setTitle: Function }) {
                             <Name>Andrew Benington</Name>
                             <br></br>
                             <Info>
+                                <p>Software Engineer at Target</p>
                                 <p>
-                                    Senior, University of Illinois at
-                                    Urbana-Champaign
+                                    SITE IS OUTDATED, WILL BE ACCURATE AGAIN
+                                    SOON
                                 </p>
-                                <p>Bachelor of Science in Computer Science</p>
                             </Info>
                         </FlexColStretch>
 

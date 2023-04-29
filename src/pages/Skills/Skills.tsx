@@ -1,6 +1,7 @@
 import ContentBox from "../../components/ContentBox";
 import DynamicColumns from "../../components/DynamicColumns";
 import { PageContent } from "../About/style";
+import { ListContainer } from "./style";
 
 function Skills() {
     const tiles = [
@@ -8,47 +9,47 @@ function Skills() {
             <h3>C/C++</h3>
             <i>&emsp;3 years experience</i>
             <h4>Used in:</h4>
-            <div>
+            <ListContainer>
                 <li>CS 126 (Software Design Studio)</li>
                 <li>CS 225 (Discrete Structures)</li>
                 <li>CS 241 (System Programming)</li>
                 <li>
                     <a href="/projects/vlc-project">VLC project</a>
                 </li>
-            </div>
+            </ListContainer>
         </ContentBox>,
         <ContentBox>
             <h3>Python</h3>
             <i>&emsp;5 years experience</i>
             <br></br>
             <h4>Used in:</h4>
-            <p>
+            <ListContainer>
                 <li>BLE Research (data visualization)</li>
                 <li>CS Stats classes (machine learning projects)</li>
                 <li>CS Audio projects (sound data/frequency manipulation)</li>
-            </p>
+            </ListContainer>
         </ContentBox>,
         <ContentBox>
             <h3>JavaScript/TypeScript</h3>
             <i>&emsp;1 year experience</i>
             <br></br>
             <h4>At Target, used for:</h4>
-            <p>
+            <ListContainer>
                 <li>Backend endpoints and worker scripts</li>
                 <li>React.js webpage design</li>
-            </p>
+            </ListContainer>
             <h4>
                 <a href="sharequote.html">ShareQuote</a> project:
             </h4>
-            <p>
+            <ListContainer>
                 <li>FireBase cloud functions</li>
-            </p>
+            </ListContainer>
         </ContentBox>,
         <ContentBox>
             <h3>Lower Layer Networking</h3>
             <i>&emsp;2 years experience</i>
             <br></br>
-            <p>
+            <ListContainer>
                 <li>Implemented my own TCP protocol for networking class</li>
                 <li>
                     <a href="/projects/vlc-project">
@@ -56,25 +57,20 @@ function Skills() {
                     </a>{" "}
                     to send data over light as class project
                 </li>
-            </p>
+            </ListContainer>
         </ContentBox>,
         <ContentBox>
-            <h3>HTML/CSS</h3>
-            <i>&emsp;2 years experience</i>
-            <br></br>
-            <p>
-                Built HTML skills to create this website, and put to use working
-                at Target for React development
-            </p>
-        </ContentBox>,
-        <ContentBox>
-            <h3>Java</h3>
+            <h3>Java/Kotlin Android Development</h3>
             <i>&emsp;5 years experience</i>
             <br></br>
-            <p>
-                Used in conjunction with Android Studio to create a mobile app
-                for a UI/UX class
-            </p>
+            <ListContainer>
+                <li>
+                    Worked on native Android components of a React Native
+                    mobile/TV/web IPTV application.
+                </li>
+                <li>React.js webpage design</li>
+                <li>FireBase cloud functions</li>
+            </ListContainer>
         </ContentBox>,
         <ContentBox>
             <h3>Dart/Flutter</h3>

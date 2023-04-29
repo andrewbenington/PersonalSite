@@ -1,32 +1,30 @@
-import styled from "styled-components";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const Banner = styled.div`
     display: flex;
     flex-direction: column;
-    color: #ffffff;
-    min-height: 214px;
-    max-height: 214px;
+
     font-weight: bold;
-    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 `;
 
 export const Headshot = styled.img`
-    height: 214px;
+    height: 180px;
     float: left;
     width: auto;
+    margin-top: 20px;
+    border-radius: 8px;
 `;
 
 export const Name = styled.div`
     line-height: 1;
     margin: 0px;
-    padding-left: 30px;
+    padding-left: 20px;
     font-size: 30px;
     text-align: left;
-    padding-top: 30px;
+    padding-top: 20px;
     margin: 0px;
     float: left;
-    color: #ffffff;
 `;
 
 export const PageTitle = styled.div`
@@ -35,8 +33,8 @@ export const PageTitle = styled.div`
     width: 30%;
     font-size: 40px;
     text-align: right;
-    padding-right: 30px;
-    padding-top: 30px;
+    padding-right: 20px;
+    padding-top: 20px;
     float: left;
     max-height: 214px;
     line-height: 1;
@@ -46,7 +44,7 @@ export const PageTitle = styled.div`
 
 export const Info = styled.div`
     font-size: 18px;
-    margin-left: 30px;
+    margin-left: 20px;
     line-height: 1;
 `;
 
@@ -62,6 +60,7 @@ export const NavListItem = styled.li`
 
 export const NavLink = styled(Link)`
     line-height: 1.1;
+    border-radius: 8px;
     padding: 10px 20px;
     &:link {
         color: white;
@@ -82,6 +81,7 @@ export const NavBar = styled.div`
     padding: 10px 0px;
     list-style-type: none;
     text-align: center;
-    width: 100%;
     justify-content: center;
+    border-radius: 8px;
+    margin: 0px 10px;
 `;

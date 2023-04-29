@@ -10,7 +10,7 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient(to top left, rgb(191, 220, 255), #203666);
+    background-color: #dedede;
 
     margin: 0px;
     min-height: 100vh;

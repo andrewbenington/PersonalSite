@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import EmptyComponent from "./components/EmptyComponent";
 import HeaderBar from "./components/HeaderBar";
 import Mobile from "./components/Mobile";
 import MobileHeader from "./components/MobileHeader";
@@ -16,14 +15,22 @@ import {
     Test,
     VLCProject,
 } from "./pages";
-import { FlexRowTall } from "./style";
 
 export const MainPageWrapper = styled.div`
     min-height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-grow: 1;
 `;
+
+export const ContentWrapper = styled.div`
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 200px;
+`;
+
 function MainPage() {
     const [isMobile, setIsMobile] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -35,13 +42,7 @@ function MainPage() {
     const [title, setTitle] = useState(pageName === "" ? "About" : pageName);
 
     return (
-        <MainPageWrapper>
-            <Mobile setIsMobile={setIsMobile} />
-            {isMobile ? (
-                <MobileHeader title={title} setTitle={setTitle} />
-            ) : (
-                <HeaderBar title={title} setTitle={setTitle} />
-            )}
+        <MainPageWrapper className="scroll-no-bar">
             {isMobile ? (
                 <MobileSideBar
                     isOpen={isSidebarOpen}
@@ -49,10 +50,15 @@ function MainPage() {
                     handler={setTitle}
                 />
             ) : (
-                <EmptyComponent />
+                <SideBar />
             )}
-            <FlexRowTall>
-                {isMobile ? <EmptyComponent /> : <SideBar />}
+            <Mobile setIsMobile={setIsMobile} />
+            <ContentWrapper>
+                {isMobile ? (
+                    <MobileHeader title={title} setTitle={setTitle} />
+                ) : (
+                    <HeaderBar title={title} setTitle={setTitle} />
+                )}
                 <Switch>
                     <Route path="/" exact component={About} />
                     <Route path="/skills" exact component={Skills} />
@@ -66,7 +72,7 @@ function MainPage() {
                     <Route path="/contact" exact component={Contact} />
                     <Route path="/test" exact component={Test} />
                 </Switch>
-            </FlexRowTall>
+            </ContentWrapper>
         </MainPageWrapper>
     );
 }

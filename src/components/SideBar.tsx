@@ -1,16 +1,24 @@
 import styled from "styled-components";
+import headshot from "../files/headshot.jpg";
+import { Headshot } from "./style";
+
 // import resume from '../files/2022Resume.pdf';
 
+const sideBarColor = "#222E66";
+
 const SideBarCol = styled.div`
-    max-width: 153px;
-    min-width: 153px;
-    position: sticky;
+    width: 180px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
     z-index: 1;
-    background-color: #03153b;
+    background-color: ${sideBarColor};
     overflow-x: hidden;
     flex: 1;
+    display: flex;
     flex-direction: column;
-    display: inline;
+    align-items: center;
 `;
 
 const SideBarLink = styled.a`
@@ -28,14 +36,12 @@ const SideBarLink = styled.a`
 function SideBar() {
     return (
         <SideBarCol>
+            <Headshot src={headshot} alt={"Andrew Benington Headshot"} />
             <SideBarLink href="https://www.linkedin.com/in/andrew-benington/">
                 LinkedIn
             </SideBarLink>
             <SideBarLink href="http://www.github.com/andrewbenington">
-                Github
-            </SideBarLink>
-            <SideBarLink href="https://app.joinhandshake.com/users/13298925">
-                Handshake
+                GitHub
             </SideBarLink>
             {/* <SideBarLink href={resume} target='_blank' rel='noopener noreferrer'>R&eacute;sum&eacute;</SideBarLink> */}
         </SideBarCol>

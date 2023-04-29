@@ -27,17 +27,6 @@ function Navigation(props: { handler: Function }) {
             </NavListItem>
             <NavListItem>
                 <NavLink
-                    to="/classes"
-                    onClick={() => {
-                        props.handler("Classes");
-                    }}
-                >
-                    {" "}
-                    Classes{" "}
-                </NavLink>
-            </NavListItem>
-            <NavListItem>
-                <NavLink
                     to="/projects"
                     onClick={() => {
                         props.handler("Projects");
@@ -45,6 +34,17 @@ function Navigation(props: { handler: Function }) {
                 >
                     {" "}
                     Projects{" "}
+                </NavLink>
+            </NavListItem>
+            <NavListItem>
+                <NavLink
+                    to="/classes"
+                    onClick={() => {
+                        props.handler("Classes");
+                    }}
+                >
+                    {" "}
+                    Classes{" "}
                 </NavLink>
             </NavListItem>
             <NavListItem>

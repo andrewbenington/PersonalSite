@@ -135,10 +135,7 @@ function MobileSideBar(props: {
                         LinkedIn
                     </SideBarLink>
                     <SideBarLink to="http://www.github.com/andrewbenington">
-                        Github
-                    </SideBarLink>
-                    <SideBarLink to="https://app.joinhandshake.com/users/13298925">
-                        Handshake
+                        GitHub
                     </SideBarLink>
                     {/* <SideBarLink to={resume} target='_blank' rel='noopener noreferrer'>R&eacute;sum&eacute;</SideBarLink> */}
                 </SideBarCol>
