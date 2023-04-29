@@ -23,14 +23,6 @@ export const MainPageWrapper = styled.div`
     flex-grow: 1;
 `;
 
-export const ContentWrapper = styled.div`
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin-left: 200px;
-`;
-
 function MainPage() {
     const [isMobile, setIsMobile] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -40,6 +32,14 @@ function MainPage() {
         pages[pages.length - 1].slice(1);
     if (pageName === "Vlc-project") pageName = "VLC Project";
     const [title, setTitle] = useState(pageName === "" ? "About" : pageName);
+
+    const ContentWrapper = styled.div`
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin-left: ${isMobile ? 0 : 200}px;
+    `;
 
     return (
         <MainPageWrapper className="scroll-no-bar">
