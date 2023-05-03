@@ -1,20 +1,12 @@
 import { useState } from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import HeaderBar from "./components/HeaderBar";
 import Mobile from "./components/Mobile";
 import MobileHeader from "./components/MobileHeader";
 import MobileSideBar from "./components/MobileSideBar";
 import SideBar from "./components/SideBar";
-import {
-    About,
-    Classes,
-    Contact,
-    Projects,
-    Skills,
-    Test,
-    VLCProject,
-} from "./pages";
+import { About, Classes, Contact, Projects, Skills, VLCProject } from "./pages";
 
 export const MainPageWrapper = styled.div`
     min-height: 100%;
@@ -59,19 +51,23 @@ function MainPage() {
                 ) : (
                     <HeaderBar title={title} setTitle={setTitle} />
                 )}
-                <Switch>
-                    <Route path="/" exact component={About} />
-                    <Route path="/skills" exact component={Skills} />
-                    <Route path="/classes" exact component={Classes} />
-                    <Route path="/projects" exact component={Projects} />
+                <Routes>
+                    <Route path="/" element={<About />} />
+                    <Route path="/skills" element={<Skills />} />
+                    <Route path="/classes" element={<Classes />} />
+                    <Route path="/projects" element={<Projects />} />
                     <Route
                         path="/projects/vlc-project"
-                        exact
-                        component={VLCProject}
+                        element={<VLCProject />}
                     />
-                    <Route path="/contact" exact component={Contact} />
-                    <Route path="/test" exact component={Test} />
-                </Switch>
+                    <Route path="/contact" element={<Contact />} />
+                    <Route
+                        path="/*"
+                        loader={() => {
+                            throw new Response("Not Found", { status: 404 });
+                        }}
+                    />
+                </Routes>
             </ContentWrapper>
         </MainPageWrapper>
     );
