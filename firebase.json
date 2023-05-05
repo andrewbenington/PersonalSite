@@ -2,14 +2,11 @@
     "hosting": {
         "public": "build",
         "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-        "redirects": [
+        "rewrites": [
             {
                 "source": "**/*{wp-login,wp-content,.env,.well-known,acme-challenge,.git,.tar,backup,wp,wordpress,admin,php,print}*",
-                "destination": "/404.html",
-                "type": 404
-            }
-        ],
-        "rewrites": [
+                "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
             {
                 "source": "**",
                 "destination": "/index.html"
