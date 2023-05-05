@@ -4,7 +4,7 @@
         "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
         "rewrites": [
             {
-                "source": "**/*{wp-login,wp-content,.env,.well-known,acme-challenge,.git,.tar,backup,wp,wordpress,admin,php,print}*",
+                "source": "**/*{wp-login,wp-content,.env,.well-known,acme-challenge,.git,.tar,backup,wp,wordpress,admin,php,print,config,.aws}*",
                 "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             },
             {

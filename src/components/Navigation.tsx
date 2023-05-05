@@ -1,3 +1,4 @@
+import ReactGA from "react-ga4";
 import { NavBar, NavLink, NavListItem } from "./style";
 
 function Navigation(props: { handler: Function }) {
@@ -7,6 +8,11 @@ function Navigation(props: { handler: Function }) {
                 <NavLink
                     to="/"
                     onClick={() => {
+                        ReactGA.send({
+                            hitType: "pageview",
+                            page: "/",
+                            title: "About",
+                        });
                         props.handler("About");
                     }}
                 >
@@ -18,6 +24,11 @@ function Navigation(props: { handler: Function }) {
                 <NavLink
                     to="/skills"
                     onClick={() => {
+                        ReactGA.send({
+                            hitType: "pageview",
+                            page: "/skills",
+                            title: "Skills",
+                        });
                         props.handler("Skills");
                     }}
                 >
@@ -29,6 +40,11 @@ function Navigation(props: { handler: Function }) {
                 <NavLink
                     to="/projects"
                     onClick={() => {
+                        ReactGA.send({
+                            hitType: "pageview",
+                            page: "/projects",
+                            title: "Projects",
+                        });
                         props.handler("Projects");
                     }}
                 >
@@ -40,6 +56,11 @@ function Navigation(props: { handler: Function }) {
                 <NavLink
                     to="/classes"
                     onClick={() => {
+                        ReactGA.send({
+                            hitType: "pageview",
+                            page: "/classes",
+                            title: "Classes",
+                        });
                         props.handler("Classes");
                     }}
                 >
@@ -51,6 +72,11 @@ function Navigation(props: { handler: Function }) {
                 <NavLink
                     to="/contact"
                     onClick={() => {
+                        ReactGA.send({
+                            hitType: "pageview",
+                            page: "/contact",
+                            title: "Contact",
+                        });
                         props.handler("Contact");
                     }}
                 >
