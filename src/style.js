@@ -67,5 +67,4 @@ export const MobilePageTitle = styled.div`
     line-height: 1;
     margin: 0px;
     font-size: 48px;
-    color: #ffffff;
 `;

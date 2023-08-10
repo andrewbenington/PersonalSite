@@ -1,3 +1,4 @@
+import { Subtitle } from "../consts/HeaderStrings";
 import { FlexColWide, MobilePageTitle } from "../style";
 import { Banner, Info, Name } from "./style";
 
@@ -8,8 +9,7 @@ function MobileHeader(props: { title: string; setTitle: Function }) {
                 <Name>Andrew Benington</Name>
                 <br></br>
                 <Info>
-                    <p>Senior, University of Illinois at Urbana-Champaign</p>
-                    <p>Bachelor of Science in Computer Science</p>
+                    <p>{Subtitle}</p>
                 </Info>
                 <MobilePageTitle>{props.title}</MobilePageTitle>
             </Banner>

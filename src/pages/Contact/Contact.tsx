@@ -9,7 +9,7 @@ const tiles = [
             <li>andrewbenington57@gmail.com</li>
             <li>
                 <a href="https://www.linkedin.com/in/andrew-benington/">
-                    My LinkedIn Page
+                    LinkedIn
                 </a>
             </li>
         </ListContainer>

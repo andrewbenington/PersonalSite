@@ -1,3 +1,4 @@
+import { Subtitle } from "../consts/HeaderStrings";
 import { FlexColStretch, FlexColWide, FlexRow, FlexRowRepel } from "../style";
 import Navigation from "./Navigation";
 import { Banner, Info, Name, PageTitle } from "./style";
@@ -12,11 +13,7 @@ function HeaderBar(props: { title: string; setTitle: Function }) {
                             <Name>Andrew Benington</Name>
                             <br></br>
                             <Info>
-                                <p>Software Engineer at Target</p>
-                                <p>
-                                    SITE IS OUTDATED, WILL BE ACCURATE AGAIN
-                                    SOON
-                                </p>
+                                <p>{Subtitle}</p>
                             </Info>
                         </FlexColStretch>
 
