@@ -2,7 +2,6 @@ import { Divider, SwipeableDrawer } from "@material-ui/core";
 import { ArrowForwardIos } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import resume from "../files/2023ResumeFull.pdf";
 import headshot from "../files/headshot.jpg";
 
 const TabButton = styled.button`
@@ -139,14 +138,10 @@ function MobileSideBar(props: {
                     <SideBarLink href="https://www.linkedin.com/in/andrew-benington/">
                         LinkedIn
                     </SideBarLink>
-                    <SideBarLink href="http://www.github.com/andrewbenington">
+                    <SideBarLink href="https://www.github.com/andrewbenington">
                         GitHub
                     </SideBarLink>
-                    <SideBarLink
-                        href={resume}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <SideBarLink href="https://drive.google.com/file/d/1bOZRrjaFJbQu9N319vfHNdY8Kp3ePNMz/view">
                         Full Résumé
                     </SideBarLink>
                 </SideBarCol>

@@ -2,8 +2,6 @@ import styled from "styled-components";
 import headshot from "../files/headshot.jpg";
 import { Headshot } from "./style";
 
-import resume from "../files/2023ResumeFull.pdf";
-
 const sideBarColor = "#222E66";
 
 const SideBarCol = styled.div`
@@ -43,11 +41,7 @@ function SideBar() {
             <SideBarLink href="http://www.github.com/andrewbenington">
                 GitHub
             </SideBarLink>
-            <SideBarLink
-                href={resume}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <SideBarLink href="https://drive.google.com/file/d/1bOZRrjaFJbQu9N319vfHNdY8Kp3ePNMz/view">
                 Full Résumé
             </SideBarLink>
         </SideBarCol>
