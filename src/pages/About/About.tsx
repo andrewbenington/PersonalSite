@@ -21,7 +21,7 @@ function About() {
                 Hi! I'm a software engineer currently working at Target. My
                 biggest strength is React.js/React Native frontend development,
                 but I'm a quick learner and always interested in entering new
-                fields. I also have experience in Kotlin, Node.js and Go backend
+                fields. I have experience in Kotlin, Node.js and Go backend
                 development, the latter of which I am currently focusing on.
             </p>
         </ContentBox>,

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import ContentBox from "../../components/ContentBox";
 import DynamicColumns from "../../components/DynamicColumns";
@@ -13,15 +12,21 @@ import { PageContent } from "../About/style";
 
 const tiles = [
     <ContentBox>
-        <h3>VLC Transmitter</h3>
+        <h3>Subawu (2019-2020)</h3>
         <p>
-            Conducted semester-long project on visible light communication
-            (VLC), during which I built a functioning VLC system using LEDs as
-            transmitters and receivers. I learned how to program an Arduino, how
-            to write an algorithm to decode an analog signal, and how to apply
-            prior research to the development of my own finished product.
+            I was the main frontend Flutter developer for the mobile app Subawu,
+            a service for matching students with study partners. While it was a
+            valuable first experience working on a development team, work
+            stopped because of the COVID-19 pandemic and never resumed.
         </p>
-        <Link to="/projects/vlc-project">Details</Link>
+    </ContentBox>,
+    <ContentBox>
+        <h3>go-ledger</h3>
+        <p>
+            Shell budgeting application that supports parsing transaction data
+            from CSVs, keyword-based categorizing the transactions, and
+            compiling them into a single Microsoft Excel spreadsheet.
+        </p>
     </ContentBox>,
     <ContentBox>
         <h3>ShareQuote (2019-2021)</h3>
@@ -37,18 +42,9 @@ const tiles = [
             <img src={Screen5} alt="App Screenshot 5" />
         </Slider>
     </ContentBox>,
-    <ContentBox>
-        <h3>Subawu (2019-2020)</h3>
-        <p>
-            I was the main frontend Flutter developer for the mobile app Subawu,
-            a service for matching students with study partners. While it was a
-            valuable first experience working on a development team, work
-            stopped because of the COVID-19 pandemic and never resumed.
-        </p>
-    </ContentBox>,
 ];
 
-function Projects(props: {} | Readonly<{}>) {
+function Projects() {
     return (
         <PageContent>
             <DynamicColumns elements={tiles} />

@@ -60,7 +60,6 @@ export const NavListItem = styled.li`
 
 export const NavLink = styled(Link)`
     line-height: 1.1;
-    border-radius: 8px;
     padding: 10px 20px;
     &:link {
         color: white;

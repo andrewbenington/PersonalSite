@@ -2,7 +2,7 @@ import { Divider, SwipeableDrawer } from "@material-ui/core";
 import { ArrowForwardIos } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import resume from '../files/2022Resume.pdf';
+import resume from "../files/2023ResumeFull.pdf";
 import headshot from "../files/headshot.jpg";
 
 const TabButton = styled.button`
@@ -142,7 +142,13 @@ function MobileSideBar(props: {
                     <SideBarLink href="http://www.github.com/andrewbenington">
                         GitHub
                     </SideBarLink>
-                    {/* <SideBarLink to={resume} target='_blank' rel='noopener noreferrer'>R&eacute;sum&eacute;</SideBarLink> */}
+                    <SideBarLink
+                        href={resume}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Full Résumé
+                    </SideBarLink>
                 </SideBarCol>
             </SwipeableDrawer>
         </div>

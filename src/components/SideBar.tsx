@@ -2,7 +2,7 @@ import styled from "styled-components";
 import headshot from "../files/headshot.jpg";
 import { Headshot } from "./style";
 
-// import resume from '../files/2022Resume.pdf';
+import resume from "../files/2023ResumeFull.pdf";
 
 const sideBarColor = "#222E66";
 
@@ -43,7 +43,13 @@ function SideBar() {
             <SideBarLink href="http://www.github.com/andrewbenington">
                 GitHub
             </SideBarLink>
-            {/* <SideBarLink href={resume} target='_blank' rel='noopener noreferrer'>R&eacute;sum&eacute;</SideBarLink> */}
+            <SideBarLink
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Full Résumé
+            </SideBarLink>
         </SideBarCol>
     );
 }
