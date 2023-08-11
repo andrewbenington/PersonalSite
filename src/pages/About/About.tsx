@@ -19,10 +19,10 @@ function About() {
             <h3>About Me</h3>
             <p>
                 Hi! I'm a software engineer currently working at Target. My
-                biggest strength is React.js/React Native frontend development,
-                but I'm a quick learner and always interested in entering new
-                fields. I have experience in Kotlin, Node.js and Go backend
-                development, the latter of which I am currently focusing on.
+                strengths include React.js/React Native frontend development,
+                Go/Kotlin backend development, Android development, and C/C++
+                embedded development. I'm a quick learner and always interested
+                in developing new skills.
             </p>
         </ContentBox>,
         <ContentBox>
