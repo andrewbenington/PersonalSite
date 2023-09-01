@@ -1,7 +1,6 @@
 import ContentBox from "../../components/ContentBox";
 import DynamicColumns from "../../components/DynamicColumns";
-import { PageContent } from "../About/style";
-import { ListContainer } from "../Skills/style";
+import { ListContainer, PageContent } from "../style";
 const tiles = [
     <ContentBox>
         <h2>You can contact me at:</h2>

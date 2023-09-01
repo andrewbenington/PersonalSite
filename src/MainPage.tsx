@@ -6,7 +6,7 @@ import Mobile from "./components/Mobile";
 import MobileHeader from "./components/MobileHeader";
 import MobileSideBar from "./components/MobileSideBar";
 import SideBar from "./components/SideBar";
-import { About, Classes, Contact, Projects, Skills, VLCProject } from "./pages";
+import Pages from "./consts/Pages";
 
 export const MainPageWrapper = styled.div`
     min-height: 100%;
@@ -52,15 +52,9 @@ function MainPage() {
                     <HeaderBar title={title} setTitle={setTitle} />
                 )}
                 <Routes>
-                    <Route path="/" element={<About />} />
-                    <Route path="/skills" element={<Skills />} />
-                    <Route path="/classes" element={<Classes />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route
-                        path="/projects/vlc-project"
-                        element={<VLCProject />}
-                    />
-                    <Route path="/contact" element={<Contact />} />
+                    {Pages.map((page) => (
+                        <Route path={page.path} element={page.component} />
+                    ))}
                     <Route
                         path="/*"
                         loader={() => {

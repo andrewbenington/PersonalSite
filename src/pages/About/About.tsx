@@ -11,7 +11,7 @@ import {
     Screen4,
     Screen5,
 } from "../../files/sharequotepics";
-import { PageContent } from "./style";
+import { ListContainer, PageContent } from "../style";
 
 function About() {
     const tiles = [
@@ -49,6 +49,17 @@ function About() {
                 <img src={Screen4} alt="App Screenshot 4" />
                 <img src={Screen5} alt="App Screenshot 5" />
             </Slider>
+        </ContentBox>,
+        <ContentBox>
+            <h2>You can contact me at:</h2>
+            <ListContainer>
+                <li>andrewbenington57@gmail.com</li>
+                <li>
+                    <a href="https://www.linkedin.com/in/andrew-benington/">
+                        LinkedIn
+                    </a>
+                </li>
+            </ListContainer>
         </ContentBox>,
     ];
 

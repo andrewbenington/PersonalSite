@@ -3,6 +3,7 @@ import { GitHub } from "@material-ui/icons";
 import { useState } from "react";
 import ContentBox from "../../components/ContentBox";
 import Mobile from "../../components/Mobile";
+import { TileTitle } from "../style";
 
 const YEAR_IN_MILLISECONDS = 1000 * 60 * 60 * 24 * 365;
 
@@ -29,26 +30,16 @@ function SkillTile(props: SkillTileProps) {
         <ContentBox style={{ width: "calc(100% - 60px)" }}>
             <Grid container>
                 <Grid item xs={isMobile ? 12 : 8}>
-                    <p style={{ fontSize: 18, fontWeight: "bold" }}>{name} </p>
-                    <p
-                        style={{
-                            fontSize: 16,
-                            fontWeight: "normal",
-                        }}
-                    >
+                    <TileTitle>{name}</TileTitle>
+                    <p style={{ fontSize: 16 }}>
                         {yearsSince(Date.parse(since))} years experience
                     </p>
-                    <p
-                        style={{
-                            fontSize: 16,
-                            fontWeight: "normal",
-                        }}
-                    >
-                        {desc}
-                    </p>
+                    <p style={{ fontSize: 16, marginRight: 12 }}>{desc}</p>
                 </Grid>
                 <Grid item xs={isMobile ? 12 : 4}>
-                    <p style={{ marginBottom: 10 }}>Experience:</p>
+                    <p style={{ marginBottom: 10, fontWeight: "bold" }}>
+                        Experience:
+                    </p>
                     {usedIn.map((u, i) => (
                         <Grid
                             container

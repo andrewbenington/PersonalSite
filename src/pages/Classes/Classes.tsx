@@ -1,7 +1,7 @@
 import ContentBox from "../../components/ContentBox";
 import DynamicColumns from "../../components/DynamicColumns";
 import VLCPaper from "../../files/VLCPaper.pdf";
-import { PageContent } from "../About/style";
+import { PageContent } from "../style";
 
 const tiles = [
     <ContentBox>

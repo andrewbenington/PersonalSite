@@ -1,6 +1,6 @@
 import ContentBox, { ContentShell } from "../../../components/ContentBox";
 import { FlexCol, VideoWrapper } from "../../../style";
-import { PageContent } from "../../About/style";
+import { PageContent } from "../../style";
 
 function VLCProject() {
     return (

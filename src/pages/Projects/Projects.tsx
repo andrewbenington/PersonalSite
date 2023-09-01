@@ -8,7 +8,7 @@ import {
     Screen4,
     Screen5,
 } from "../../files/sharequotepics";
-import { PageContent } from "../About/style";
+import { PageContent } from "../style";
 import ProjectTile from "./ProjectTile";
 
 interface Project {

@@ -7,7 +7,6 @@ export default styled.div`
     padding: 1px 15px 15px 15px;
     border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     align-self: center;
     p {
         a {

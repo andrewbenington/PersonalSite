@@ -1,6 +1,5 @@
-import { PageContent } from "../About/style";
+import { ListContainer, PageContent } from "../style";
 import SkillTile from "./SkillTile";
-import { ListContainer } from "./style";
 
 function Skills() {
     const skills = [

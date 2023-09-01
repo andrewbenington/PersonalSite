@@ -15,7 +15,7 @@ function ProjectTile(props: ProjectTileProps) {
         <ContentBox>
             <Grid container>
                 <Grid item xs={github ? 10 : 12}>
-                    <h3>{name}</h3>
+                    <p>{name}</p>
                 </Grid>
                 {github ? (
                     <Grid

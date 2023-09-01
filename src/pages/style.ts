@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const TileTitle = styled.div`
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 12px;
+`;
+
+export const ListContainer = styled.div`
+    padding: 15px;
+    align-self: center;
+`;
+
 export const PageContent = styled.div`
     justify-content: center;
     display: flex;
