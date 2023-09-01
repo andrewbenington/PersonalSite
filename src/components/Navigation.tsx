@@ -9,7 +9,7 @@ function Navigation(props: { handler: Function }) {
                 return (
                     <NavListItem>
                         <NavLink
-                            to="/"
+                            to={page.path}
                             onClick={() => {
                                 ReactGA.send({
                                     hitType: "pageview",

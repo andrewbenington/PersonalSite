@@ -1,11 +1,4 @@
-import {
-    About,
-    Contact,
-    Experience,
-    Projects,
-    Skills,
-    VLCProject,
-} from "../pages";
+import { About, Experience, Projects, Skills, VLCProject } from "../pages";
 
 interface Page {
     name: string;
@@ -40,11 +33,6 @@ const Pages: Page[] = [
         path: "/projects/vlc-project",
         component: <VLCProject />,
         excludeFromHeader: true,
-    },
-    {
-        name: "Contact",
-        path: "/contact",
-        component: <Contact />,
     },
 ];
 
