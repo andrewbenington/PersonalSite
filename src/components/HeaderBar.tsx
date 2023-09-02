@@ -1,9 +1,11 @@
+import { Route, Routes } from "react-router-dom";
 import { Subtitle } from "../consts/HeaderStrings";
+import Pages from "../consts/Pages";
 import { FlexColStretch, FlexColWide, FlexRow, FlexRowRepel } from "../style";
 import Navigation from "./Navigation";
 import { Banner, Info, Name, PageTitle } from "./style";
 
-function HeaderBar(props: { title: string; setTitle: Function }) {
+function HeaderBar() {
     return (
         <FlexRow>
             <FlexColWide>
@@ -17,9 +19,16 @@ function HeaderBar(props: { title: string; setTitle: Function }) {
                             </Info>
                         </FlexColStretch>
 
-                        <PageTitle>{props.title}</PageTitle>
+                        <Routes>
+                            {Pages.map((page) => (
+                                <Route
+                                    path={page.path}
+                                    element={<PageTitle>{page.name}</PageTitle>}
+                                />
+                            ))}
+                        </Routes>
                     </FlexRowRepel>
-                    <Navigation handler={props.setTitle} />
+                    <Navigation />
                 </Banner>
             </FlexColWide>
         </FlexRow>

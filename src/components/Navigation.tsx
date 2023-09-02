@@ -2,7 +2,7 @@ import ReactGA from "react-ga4";
 import Pages from "../consts/Pages";
 import { NavBar, NavLink, NavListItem } from "./style";
 
-function Navigation(props: { handler: Function }) {
+function Navigation() {
     return (
         <NavBar>
             {Pages.filter((page) => !page.excludeFromHeader).map((page) => {
@@ -16,7 +16,6 @@ function Navigation(props: { handler: Function }) {
                                     page: page.path,
                                     title: page.name,
                                 });
-                                props.handler(page.name);
                             }}
                         >
                             {page.name}

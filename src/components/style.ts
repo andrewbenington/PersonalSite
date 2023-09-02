@@ -42,6 +42,10 @@ export const PageTitle = styled.div`
     font-size: 60px;
 `;
 
+export const MobileTitle = styled.div`
+    font-size: 24px;
+`;
+
 export const Info = styled.div`
     font-size: 18px;
     margin-left: 20px;

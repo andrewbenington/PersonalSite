@@ -1,7 +1,15 @@
-import { About, Experience, Projects, Skills, VLCProject } from "../pages";
+import {
+    About,
+    Classes,
+    Experience,
+    Projects,
+    Skills,
+    VLCProject,
+} from "../pages";
 
 interface Page {
     name: string;
+    hideMobileName?: boolean;
     path: string;
     component: JSX.Element;
     excludeFromHeader?: boolean;
@@ -10,6 +18,7 @@ interface Page {
 const Pages: Page[] = [
     {
         name: "About",
+        hideMobileName: true,
         path: "/",
         component: <About />,
     },
@@ -33,6 +42,11 @@ const Pages: Page[] = [
         path: "/projects/vlc-project",
         component: <VLCProject />,
         excludeFromHeader: true,
+    },
+    {
+        name: "Classes",
+        path: "/classes",
+        component: <Classes />,
     },
 ];
 

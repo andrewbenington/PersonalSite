@@ -1,18 +1,45 @@
-import { Subtitle } from "../consts/HeaderStrings";
-import { FlexColWide, MobilePageTitle } from "../style";
-import { Banner, Info, Name } from "./style";
+import { AppBar, IconButton, Toolbar } from "@material-ui/core";
+import { Menu } from "@material-ui/icons";
+import { Route, Routes } from "react-router-dom";
+import Pages from "../consts/Pages";
+import { FlexColWide } from "../style";
+import { MobileTitle } from "./style";
 
-function MobileHeader(props: { title: string; setTitle: Function }) {
+interface MobileHeaderProps {
+    toggleSidebar: () => void;
+}
+
+function MobileHeader(props: MobileHeaderProps) {
     return (
         <FlexColWide>
-            <Banner>
-                <Name>Andrew Benington</Name>
-                <br></br>
-                <Info>
-                    <p>{Subtitle}</p>
-                </Info>
-                <MobilePageTitle>{props.title}</MobilePageTitle>
-            </Banner>
+            <AppBar color="primary">
+                <Toolbar>
+                    <IconButton
+                        size="medium"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        onClick={props.toggleSidebar}
+                    >
+                        <Menu />
+                    </IconButton>
+                    <Routes>
+                        {Pages.map((page) => (
+                            <Route
+                                path={page.path}
+                                element={
+                                    <MobileTitle>
+                                        {page.hideMobileName
+                                            ? ""
+                                            : page.name + " - "}
+                                        Andrew Benington
+                                    </MobileTitle>
+                                }
+                            />
+                        ))}
+                    </Routes>
+                </Toolbar>
+            </AppBar>
         </FlexColWide>
     );
 }

@@ -1,16 +1,9 @@
 import { Divider, SwipeableDrawer } from "@material-ui/core";
-import { ArrowForwardIos } from "@material-ui/icons";
+import ReactGA from "react-ga4";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Pages from "../consts/Pages";
 import headshot from "../files/headshot.jpg";
-
-const TabButton = styled.button`
-    height: 70px;
-    width: 60px;
-    border-radius: 5px;
-    background-color: #222e66;
-    border-width: 0px;
-`;
 
 const SideBarCol = styled.div`
     width: 180px;
@@ -51,16 +44,13 @@ const MobileHeadshot = styled.img`
     height: 180px;
     width: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
     background-color: #222e66;
     margin-left: 24px;
 `;
 
-function MobileSideBar(props: {
-    isOpen: boolean;
-    setIsOpen: Function;
-    handler: Function;
-}) {
+function MobileSideBar(props: { isOpen: boolean; setIsOpen: Function }) {
     const closeSidebar = () => {
         props.setIsOpen(false);
     };
@@ -71,12 +61,6 @@ function MobileSideBar(props: {
 
     return (
         <div style={{ position: "fixed", top: 0, bottom: 0 }}>
-            <TabButton
-                onClick={openSidebar}
-                style={{ position: "fixed", bottom: 0 }}
-            >
-                <ArrowForwardIos htmlColor="white" />
-            </TabButton>
             <SwipeableDrawer
                 open={props.isOpen}
                 onClose={closeSidebar}
@@ -87,52 +71,24 @@ function MobileSideBar(props: {
                         src={headshot}
                         alt={"Andrew Benington Headshot"}
                     />
-                    <SideBarNavLink
-                        style={{ marginTop: "20px" }}
-                        to="/"
-                        onClick={() => {
-                            props.handler("About");
-                        }}
-                    >
-                        {" "}
-                        About{" "}
-                    </SideBarNavLink>
-                    <SideBarNavLink
-                        to="/skills"
-                        onClick={() => {
-                            props.handler("Skills");
-                        }}
-                    >
-                        {" "}
-                        Skills{" "}
-                    </SideBarNavLink>
-                    <SideBarNavLink
-                        to="/classes"
-                        onClick={() => {
-                            props.handler("Classes");
-                        }}
-                    >
-                        {" "}
-                        Classes{" "}
-                    </SideBarNavLink>
-                    <SideBarNavLink
-                        to="/projects"
-                        onClick={() => {
-                            props.handler("Projects");
-                        }}
-                    >
-                        {" "}
-                        Projects{" "}
-                    </SideBarNavLink>
-                    <SideBarNavLink
-                        to="/contact"
-                        onClick={() => {
-                            props.handler("Contact");
-                        }}
-                    >
-                        {" "}
-                        Contact{" "}
-                    </SideBarNavLink>
+                    {Pages.filter((page) => !page.excludeFromHeader).map(
+                        (page) => (
+                            <SideBarNavLink
+                                key={page.name}
+                                to={page.path}
+                                onClick={() => {
+                                    ReactGA.send({
+                                        hitType: "pageview",
+                                        page: page.path,
+                                        title: page.name,
+                                    });
+                                    props.setIsOpen(false);
+                                }}
+                            >
+                                {page.name}
+                            </SideBarNavLink>
+                        )
+                    )}
                     <Divider light={true} />
                     <div style={{ height: "20px" }} />
                     <SideBarLink href="https://www.linkedin.com/in/andrew-benington/">

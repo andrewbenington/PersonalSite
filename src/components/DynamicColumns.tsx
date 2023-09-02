@@ -29,7 +29,7 @@ function useWindowDimensions() {
 function DynamicColumns(props: { elements: ReactElement<any, any>[] }) {
     const { width } = useWindowDimensions();
     let cols = 1;
-    if (width > 1300 && props.elements.length > 6) {
+    if (width > 1300) {
         cols = 3;
     } else if (width > 900) {
         cols = 2;

@@ -1,5 +1,6 @@
+import { MuiThemeProvider, createTheme } from "@material-ui/core";
 import { useState } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import HeaderBar from "./components/HeaderBar";
 import Mobile from "./components/Mobile";
@@ -15,16 +16,17 @@ export const MainPageWrapper = styled.div`
     flex-grow: 1;
 `;
 
+const theme = createTheme({
+    palette: {
+        primary: { main: "#222e66" },
+    },
+});
+
 function MainPage() {
     const [isMobile, setIsMobile] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    let pages = useLocation().pathname.split("/");
-    let pageName =
-        pages[pages.length - 1].charAt(0).toUpperCase() +
-        pages[pages.length - 1].slice(1);
-    if (pageName === "Vlc-project") pageName = "VLC Project";
-    const [title, setTitle] = useState(pageName === "" ? "About" : pageName);
 
+    const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
     const ContentWrapper = styled.div`
         min-height: 100%;
         display: flex;
@@ -34,36 +36,39 @@ function MainPage() {
     `;
 
     return (
-        <MainPageWrapper className="scroll-no-bar">
-            {isMobile ? (
-                <MobileSideBar
-                    isOpen={isSidebarOpen}
-                    setIsOpen={setIsSidebarOpen}
-                    handler={setTitle}
-                />
-            ) : (
-                <SideBar />
-            )}
-            <Mobile setIsMobile={setIsMobile} />
-            <ContentWrapper>
+        <MuiThemeProvider theme={theme}>
+            <MainPageWrapper className="scroll-no-bar">
                 {isMobile ? (
-                    <MobileHeader title={title} setTitle={setTitle} />
-                ) : (
-                    <HeaderBar title={title} setTitle={setTitle} />
-                )}
-                <Routes>
-                    {Pages.map((page) => (
-                        <Route path={page.path} element={page.component} />
-                    ))}
-                    <Route
-                        path="/*"
-                        loader={() => {
-                            throw new Response("Not Found", { status: 404 });
-                        }}
+                    <MobileSideBar
+                        isOpen={isSidebarOpen}
+                        setIsOpen={setIsSidebarOpen}
                     />
-                </Routes>
-            </ContentWrapper>
-        </MainPageWrapper>
+                ) : (
+                    <SideBar />
+                )}
+                <Mobile setIsMobile={setIsMobile} />
+                <ContentWrapper>
+                    {isMobile ? (
+                        <MobileHeader toggleSidebar={toggleSidebar} />
+                    ) : (
+                        <HeaderBar />
+                    )}
+                    <Routes>
+                        {Pages.map((page) => (
+                            <Route path={page.path} element={page.component} />
+                        ))}
+                        <Route
+                            path="/*"
+                            loader={() => {
+                                throw new Response("Not Found", {
+                                    status: 404,
+                                });
+                            }}
+                        />
+                    </Routes>
+                </ContentWrapper>
+            </MainPageWrapper>
+        </MuiThemeProvider>
     );
 }
 

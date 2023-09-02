@@ -6,9 +6,36 @@ export const TileTitle = styled.div`
     margin-top: 12px;
 `;
 
+export const TileHeader = styled.div`
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+`;
+
+export const TileBody = styled.div`
+    margin-top: 12px;
+`;
+
 export const ListContainer = styled.div`
-    padding: 15px;
+    padding-left: 15px;
     align-self: center;
+    list-style-type: "- ";
+    li {
+        margin-bottom: 8px;
+    }
+`;
+
+export const SliderWrapper = styled.div`
+    .slick-arrow {
+        color: black;
+        z-index: 2;
+    }
+    .slick-prev {
+        left: 0px;
+    }
+    .slick-next {
+        right: 0px;
+    }
 `;
 
 export const PageContent = styled.div`
