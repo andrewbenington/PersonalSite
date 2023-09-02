@@ -28,16 +28,12 @@ export const Name = styled.div`
 `;
 
 export const PageTitle = styled.div`
-    line-height: 1;
     margin: 0px;
     width: 30%;
-    font-size: 40px;
     text-align: right;
     padding-right: 20px;
     padding-top: 20px;
-    float: left;
     max-height: 214px;
-    line-height: 1;
     margin: 0px;
     font-size: 60px;
 `;

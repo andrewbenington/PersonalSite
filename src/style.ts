@@ -1,20 +1,8 @@
 import styled from "styled-components";
 
-export const FlexRowTall = styled.div`
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-`;
-
 export const FlexRow = styled.div`
     display: flex;
     flex-direction: row;
-`;
-
-export const FlexRowStretch = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 `;
 
 export const FlexCol = styled.div`
@@ -52,19 +40,4 @@ export const VideoWrapper = styled.div`
         height: 100%;
         margin: 0px 15px 15px 0px;
     }
-`;
-
-export const MobilePageTitle = styled.div`
-    line-height: 1;
-    font-weight: bold;
-    margin: 0px;
-    width: 100%;
-    font-size: 40px;
-    text-align: center;
-    padding-top: 30px;
-    float: left;
-    max-height: 214px;
-    line-height: 1;
-    margin: 0px;
-    font-size: 48px;
 `;
