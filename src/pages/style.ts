@@ -42,7 +42,6 @@ export const PageContent = styled.div`
     justify-content: center;
     display: flex;
     flex-direction: row;
-    height: 100%;
     width: 100%;
 `;
 
