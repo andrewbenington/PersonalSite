@@ -25,11 +25,11 @@ function About() {
         <ContentBox>
             <TileHeader>About Me</TileHeader>
             <TileBody>
-                Hi! I'm a software engineer working at Target. My strengths
-                include React.js/React Native frontend development, Go/Kotlin
-                backend development, Android development, and C/C++ embedded
-                development. I'm a quick learner and always interested in
-                developing new skills.
+                Hi! I'm a software engineer working at Law Bulletin Media. My
+                strengths include React.js/React Native frontend development,
+                Go/Kotlin backend development, and Android development. I'm a
+                quick learner and always interested in developing new skills. I
+                try and keep this site updated, but it doesn't always happen.
             </TileBody>
         </ContentBox>,
         <ContentBox>

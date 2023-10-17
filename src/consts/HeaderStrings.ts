@@ -1,1 +1,1 @@
-export const Subtitle = "Software Engineer at Target";
+export const Subtitle = "Software Engineer at Law Bulletin Media";
